@@ -12,20 +12,13 @@ def can_be_instantiated_and_then_saved
 end
 
 def can_be_created_with_a_hash_of_attributes
-  attributes = {
-      title: "The Sting",
-      release_date: 1973,
-      director: "George Roy Hill",
-      lead: "Paul Newman",
-      in_theaters: false
-  }
   movie = Movie.create(attributes)
 end
 
 def can_be_created_in_a_block
   Movie.create do |m|
-    m.title = "Wayne's World"
-    m.release_date = "1992"
+    m.title = "Home Alone"
+    m.release_date = "1990"
   end
 end
 
@@ -34,15 +27,15 @@ def can_get_the_first_item_in_the_database
 end
 
 def can_get_the_last_item_in_the_database
-  __
+  Movie.last.title
 end
 
 def can_get_size_of_the_database
-  __
+  Movie.all.size
 end
 
 def can_find_the_first_item_from_the_database_using_id
-  __
+  Movie.
 end
 
 def can_find_by_multiple_attributes

@@ -24,7 +24,8 @@ end
 
 def can_be_created_in_a_block
   Movie.create do |m|
-    __
+    m.title = "Wayne's World"
+    m.release_date = "1992"
   end
 end
 
